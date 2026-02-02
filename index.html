@@ -261,27 +261,29 @@ header {
 </em></p>
 <h2 id="phanhoi">Phiếu phản hồi</h2>
 
-<form action="mailto:nhom2.12a16@gmail.com" method="post" enctype="text/plain">
+<form onsubmit="guiPhanHoi(event)">
+  <label>Họ và tên:</label><br>
+  <input type="text" name="hoten" required style="width:60%; padding:8px;"><br><br>
 
-    <p>
-        <label>Họ và tên:</label><br>
-        <input type="text" name="Họ và tên" required style="width:60%; padding:8px;">
-    </p>
+  <label>Email hoặc Số điện thoại:</label><br>
+  <input type="text" name="lienhe" required style="width:60%; padding:8px;"><br><br>
 
-    <p>
-        <label>Email hoặc Số điện thoại:</label><br>
-        <input type="text" name="Liên hệ" required style="width:60%; padding:8px;">
-    </p>
+  <label>Ý kiến phản hồi:</label><br>
+  <textarea name="ykien" rows="5" required style="width:60%; padding:8px;"></textarea><br><br>
 
-    <p>
-        <label>Ý kiến phản hồi:</label><br>
-        <textarea name="Ý kiến" rows="5" required style="width:60%; padding:8px;"></textarea>
-    </p>
-
-    <button type="submit" style="padding:10px 20px; background:#b11226; color:white; border:none; border-radius:6px;">
-        Gửi phản hồi
-    </button>
-
+  <button type="submit" style="padding:10px 20px; background:#b11226; color:white; border:none; border-radius:6px">
+    Gửi phản hồi
+  </button>
 </form>
+<script>
+function guiPhanHoi(e) {
+  e.preventDefault();
+  alert("Đã gửi phản hồi thành công! Cảm ơn bạn ❤️");
+}
+</script>
+
+</body>
+</html>
+
 
 
